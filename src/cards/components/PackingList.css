@@ -1,0 +1,15 @@
+.list {
+    max-height: 500px; /* Set a fixed height for the list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative; /* Position context for sticky positioning */
+  }
+  
+  .actions {
+    position: sticky; /* Make the actions stick to the bottom of the container */
+    bottom: 0; /* Stick to the bottom */
+    background: none; /* Background color to cover content behind */
+    padding: 1rem; /* Add padding for better spacing */
+    
+    z-index: 1; /* Ensure it appears above other content */
+  }
+  

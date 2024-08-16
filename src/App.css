@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.border{
+  height: 100vh;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-image: url(../src/img/1337140.png);
+background-repeat: no-repeat;
+background-size: cover;
+backface-visibility: visible;
+}
+
+/* .flipper{
+ width: 70vw;
+ height: 70vh;
+border: 2px solid green;
+display: flex;
+justify-content: space-around;
+align-items: center;
+ 
+} */

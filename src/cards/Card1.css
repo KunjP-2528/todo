@@ -1,0 +1,67 @@
+.button {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #1fdd3e, #12cfc6);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+   
+  /* Hover effect */
+  .button:hover {
+    background: linear-gradient(45deg, #504e4e00, #ff6f61);
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+   
+  /* Click effect */
+  .button:active {
+    transform: scale(0.95);
+  }
+   
+  /* Animation: glowing effect */
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 40px #ff6f61, 0 0 80px #ff6f61;
+    }
+    50% {
+      box-shadow: 0 0 10px #ff9068, 0 0 20px #ff9068, 0 0 30px #ff9068, 0 0 60px #ff9068, 0 0 100px #ff9068;
+    }
+    100% {
+      box-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 40px #ff6f61, 0 0 80px #ff6f61;
+    }
+  }
+   
+  /* Apply the glowing animation */
+  .button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 111, 97, 0.2), rgba(255, 144, 104, 0.2));
+    z-index: 0;
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    animation: glowing 2s infinite;
+  }
+   
+  .button:hover::before {
+    opacity: 1;
+  }
+   
+  /* Text styles */
+  .button span {
+    position: relative;
+    z-index: 1;
+  }
